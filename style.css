@@ -1,0 +1,450 @@
+
+/* =====================================
+   ShareNexa - Main CSS
+   Theme: Obsidian Black + Dark Purple
+===================================== */
+
+/* 1. COLOR VARIABLES */
+:root {
+    --black: #08060D;
+    --plum: #24102F;
+    --violet: #8735D5;
+    --electric: #C13CFF;
+    --white: #F8F5FC;
+    --grey: #AAA2B5;
+    --border: rgba(193, 60, 255, 0.22);
+}
+
+/* 2. BASIC RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+}
+
+/* 3. HEADINGS AND TEXT */
+h1, h2, h3, h4 {
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: clamp(2.3rem, 6vw, 4.5rem);
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-size: 1.3rem;
+}
+
+p {
+    color: var(--grey);
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: var(--electric);
+}
+
+/* 4. HEADER */
+header {
+    width: 100%;
+    padding: 20px 7%;
+    background: rgba(8, 6, 13, 0.95);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+}
+
+header h1,
+header .logo {
+    font-size: 1.8rem;
+    color: var(--electric);
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+nav a {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+nav a:hover {
+    color: var(--electric);
+}
+
+/* 5. MAIN CONTENT */
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
+section {
+    padding: 80px 7%;
+    scroll-margin-top: 90px;
+}
+
+section > h2 {
+    margin-bottom: 30px;
+}
+
+/* 6. HOME SECTION */
+#home {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(135, 53, 213, 0.22),
+            transparent 35%
+        ),
+        linear-gradient(135deg, var(--black), var(--plum));
+}
+
+#home h1 {
+    max-width: 850px;
+}
+
+#home p {
+    max-width: 600px;
+    font-size: 1.1rem;
+}
+
+#home img {
+    width: 100%;
+    max-width: 550px;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 22px;
+    margin: 25px 0;
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 50px rgba(135, 53, 213, 0.2);
+}
+
+/* 7. BUTTONS */
+button,
+.button,
+input[type="submit"] {
+    background: linear-gradient(
+        135deg,
+        var(--violet),
+        var(--electric)
+    );
+    color: white;
+    border: none;
+    padding: 13px 25px;
+    border-radius: 9px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover,
+.button:hover,
+input[type="submit"]:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(193, 60, 255, 0.3);
+}
+
+/* 8. EXPLORE SECTION */
+#explore {
+    background: var(--black);
+}
+
+#explore > h2 {
+    color: var(--electric);
+}
+
+/* Product cards */
+#explore > div,
+#explore .product-card,
+.product-card {
+    background: linear-gradient(
+        145deg,
+        #1B1124,
+        #100B17
+    );
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 18px;
+    margin: 12px;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 30px);
+    max-width: 350px;
+    transition: 0.3s ease;
+}
+
+#explore > div:hover,
+#explore .product-card:hover,
+.product-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--electric);
+    box-shadow: 0 12px 35px rgba(135, 53, 213, 0.18);
+}
+
+#explore img,
+.product-card img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 11px;
+    margin-bottom: 15px;
+}
+
+#explore h3,
+.product-card h3 {
+    color: var(--white);
+}
+
+#explore a {
+    color: var(--electric);
+    font-weight: bold;
+}
+
+/* 9. PRODUCT DETAILS */
+#product-details {
+    background: linear-gradient(
+        135deg,
+        var(--plum),
+        var(--black)
+    );
+}
+
+#product-details > div {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    background: rgba(8, 6, 13, 0.65);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+#product-details h3 {
+    color: var(--electric);
+    margin-top: 25px;
+}
+
+#product-details a {
+    display: inline-block;
+    margin: 8px 8px 8px 0;
+    padding: 11px 18px;
+    background: var(--violet);
+    border-radius: 8px;
+}
+
+/* 10. FORMS */
+form {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 30px;
+    background: #160D1E;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+
+label {
+    display: block;
+    color: var(--white);
+    margin: 15px 0 7px;
+    font-weight: 600;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 12px;
+    background: #0D0912;
+    color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--electric);
+    box-shadow: 0 0 10px rgba(193, 60, 255, 0.15);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+select option {
+    background: var(--black);
+    color: var(--white);
+}
+
+/* 11. OTHER PAGE SECTIONS */
+#add-product,
+#login,
+#signup,
+#booking,
+#messages,
+#dashboard,
+#admin,
+#how-it-works,
+#about-us {
+    background: linear-gradient(
+        145deg,
+        var(--black),
+        #1A0D22
+    );
+}
+
+#add-product h2,
+#login h2,
+#signup h2,
+#booking h2,
+#messages h2,
+#dashboard h2,
+#admin h2,
+#how-it-works h2,
+#about-us h2 {
+    color: var(--electric);
+}
+
+/* 12. DASHBOARD AND ADMIN CARDS */
+#dashboard > div,
+#admin > div {
+    background: #180F20;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    padding: 20px;
+    margin: 12px 0;
+}
+
+/* 13. FOOTER */
+footer {
+    padding: 35px 7%;
+    text-align: center;
+    background: #050309;
+    border-top: 1px solid var(--border);
+}
+
+footer p {
+    margin: 0;
+    color: var(--grey);
+}
+
+/* 14. SELECTION COLOR */
+::selection {
+    background: var(--violet);
+    color: white;
+}
+
+/* 15. RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 55px 5%;
+    }
+
+    #home {
+        min-height: 480px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    #explore > div,
+    #explore .product-card,
+    .product-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 12px 0;
+    }
+
+    #product-details > div {
+        padding: 20px;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 400px) {
+    nav {
+        gap: 10px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+/* Product Details Laptop Image */
+#product-details img {
+    width: 100%;
+    max-width: 450px;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+}
